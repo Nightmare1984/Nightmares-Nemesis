@@ -1,5 +1,4 @@
 #!/bin/bash
-[ -d /run/archiso/bootmnt/arch ] && exit
 yad --title "XeroLinux Nemesis Tool" --form --columns=3 --width=540 --height=190 --text="My Nemesis tool for installing Apps n Drivers, for my (x570/Ryzen5) system." --image=$HOME/xero.png  \
 --field="<b>Update System Now</b>":fbtn "konsole --noclose -e sh './scripts/sysupd'" \
 --field="<b>Install Those Arch Pkgs...</b>":fbtn "konsole --noclose -e sh './scripts/arch'" \
