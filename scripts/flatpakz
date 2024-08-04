@@ -1,12 +1,24 @@
 #!/bin/bash
-#!/bin/bash
-#!/bin/bash
 #set -e
 ##################################################################################################################
 # Written to be used on 64 bits computers
 # Author 	: 	DarkXero
 # Website 	: 	http://xerolinux.github.io
 ##################################################################################################################
+
+# Define an array of Flatpak packages
+flatpak_packages=(
+    audacity gitahead rpi-imager jitsi-meet zoom filezilla bitwarden parsec warpinator
+    PlexDesktop PlexHTPC stremio mpv vlc handbrake mkvtoolnix-gui filebot makemkv
+    org.remmina.Remmina libreoffice openrgb firmware ferdium io.github.spacingbat3.webcord
+    thunderbird org.gnome.Rhythmbox3 com.obsproject.Studio com.obsproject.Studio.Locale
+    com.obsproject.Studio.Plugin.Gstreamer com.obsproject.Studio.Plugin.InputOverlay
+    com.obsproject.Studio.Plugin.MoveTransition com.obsproject.Studio.Plugin.OBSVkCapture
+    com.obsproject.Studio.Plugin.ScaleToSound com.obsproject.Studio.Plugin.SceneSwitcher
+    com.obsproject.Studio.Plugin.TransitionTable com.obsproject.Studio.Plugin.WebSocket
+    com.obsproject.Studio.Plugin.waveform
+)
+
 echo
 tput setaf 4
 echo "###############################################################################"
@@ -18,7 +30,10 @@ echo "#################################"
 echo "      Install Yer Flatpaks       "
 echo "#################################"
 echo
-flatpak install -y audacity gitahead rpi-imager jitsi-meet zoom filezilla bitwarden parsec warpinator PlexDesktop PlexHTPC stremio mpv vlc handbrake mkvtoolnix-gui filebot makemkv org.remmina.Remmina libreoffice openrgb firmware ferdium io.github.spacingbat3.webcord thunderbird org.gnome.Rhythmbox3 com.obsproject.Studio com.obsproject.Studio.Locale com.obsproject.Studio.Plugin.Gstreamer com.obsproject.Studio.Plugin.InputOverlay com.obsproject.Studio.Plugin.MoveTransition com.obsproject.Studio.Plugin.OBSVkCapture com.obsproject.Studio.Plugin.ScaleToSound com.obsproject.Studio.Plugin.SceneSwitcher com.obsproject.Studio.Plugin.TransitionTable com.obsproject.Studio.Plugin.WebSocket com.obsproject.Studio.Plugin.waveform
+
+# Install Flatpak packages
+flatpak install -y "${flatpak_packages[@]}"
+
 echo
 echo "#################################"
 echo "          Done! Exit Me          "
